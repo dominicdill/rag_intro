@@ -40,7 +40,7 @@ class Config:
     db_password: str = field(default_factory=lambda: os.getenv('DB_PASSWORD'))
     document_directory: str = field(default_factory=lambda: os.getenv('DOCUMENT_DIRECTORY', 'rag_documents'))
     document_image_directory: str = field(default_factory=lambda: os.getenv('DOCUMENT_IMAGE_DIRECTORY', 'rag_document_images'))
-    model_id: str = field(default_factory=lambda: os.getenv('MODEL_ID', 'intfloat/multilingual-e5-large-instruct'))
+    model_id: str = field(default_factory=lambda: os.getenv('EMBEDDING_MODEL_ID', 'intfloat/multilingual-e5-large-instruct'))
     encoding_batch_size: int = field(default_factory=lambda: int(os.getenv('ENCODING_BATCH_SIZE', '32')))
     db_insert_batch_size: int = field(default_factory=lambda: int(os.getenv('DB_INSERT_BATCH_SIZE', '100')))
     failed_files_log: str = field(default_factory=lambda: os.getenv('FAILED_FILES_LOG', 'failed_files_log.csv'))
